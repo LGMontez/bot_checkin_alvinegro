@@ -1,12 +1,17 @@
+import os
 import time
 import requests
 import snscrape.modules.twitter as sntwitter
 
-# Configurações
-TELEGRAM_BOT_TOKEN = '8152106374:AAGhckaVaKhvYutzGDDUmq2yws5wd8BeaTU'
-TELEGRAM_CHAT_ID = '-1002538570439'
-USUARIO_TWITTER = 'camisa7oficial'
+# Variáveis de ambiente
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID')
+USUARIO_TWITTER = os.getenv('USUARIO_TWITTER')
 PALAVRAS_CHAVE = ['check-in', 'alvinegro']
+
+import time
+import requests
+import snscrape.modules.twitter as sntwitter
 
 # Armazena tweets já enviados
 tweets_enviados = set()
